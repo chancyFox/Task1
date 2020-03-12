@@ -1,17 +1,3 @@
-﻿#region Fog
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Task1
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            #endregion
             Console.WriteLine("Утро. Поликлиника. Вы в очереди за справкой.");
             Console.WriteLine("Казалось бы - что может пойти не так? Но вот вы видите старушек.");
             Console.Write( "Сколько их: "); 
@@ -23,6 +9,3 @@ namespace Task1
             int minutesWaiting = (countOldLadies * 10) % 60;
 
             Console.WriteLine($"И вы понимаете, что ждать вам осталось {hourseWaiting} часов {minutesWaiting} минут...");
-        }
-    }
-}
