@@ -1,15 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Задание_3_введение
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
             int imageCount = 56;
             int imagesInLine = 3;
 
@@ -18,6 +6,3 @@ namespace Задание_3_введение
 
             Console.WriteLine($"У вас имеется {imageCount} картинок. ");
             Console.WriteLine($"Из них можно составить {lines} рядов. {imageLeft} картинки осталось");
-        }
-    }
-}
