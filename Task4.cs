@@ -1,4 +1,3 @@
-     
      int cristallsPrice = 5;
      int goldCount, cristallsToBye, spentGold, goldLeft;
      bool enoghGold;
@@ -17,4 +16,3 @@
 
      goldLeft = goldCount - cristallsToBye * cristallsPrice;
      Console.WriteLine($"Отлично. Теперь у тебя {goldLeft} золота и {cristallsToBye} кристаллов");
-    
