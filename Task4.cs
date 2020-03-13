@@ -1,6 +1,5 @@
      int cristallsPrice = 5;
-     int goldCount, cristallsToBye, spentGold
-     ;
+     int goldCount, cristallsToBye, spentGold;
      bool enoghGold;
 
      Console.WriteLine("Здравствуй, путник. У нас ты можешь купить кристаллы за золото.");
