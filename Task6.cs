@@ -12,4 +12,4 @@
     Console.Write($"Где ты работаешь? \n- ");
     userWork = Console.ReadLine();
 
-    Console.WriteLine($"Тебя зовут {userName}, тебе {userAge} лет, по знаку зодиака ты {userZodiaс} и работаешь {userWork}. ");
+    Console.WriteLine($"Тебя зовут {userName}, тебе {userAge} лет, по знаку зодиака ты {userZodiaс} и работаешь {userWork}.");
