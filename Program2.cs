@@ -5,7 +5,8 @@
             int countOldLadies = Convert.ToInt32 (Console.ReadLine());
             Console.WriteLine("Их действительно " + countOldLadies);
 
-            int hourseWaiting = (countOldLadies * 10) / 60;
-            int minutesWaiting = (countOldLadies * 10) % 60;
+            int waitingTime = countOldLadies * 10;
+            int hourseWaiting = waitingTime / 60;
+            int minutesWaiting = waitingTime % 60;
 
             Console.WriteLine($"И вы понимаете, что ждать вам осталось {hourseWaiting} часов {minutesWaiting} минут...");
