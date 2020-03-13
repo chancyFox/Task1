@@ -1,5 +1,6 @@
      int cristallsPrice = 5;
-     int goldCount, cristallsToBye, spentGold, goldLeft;
+     int goldCount, cristallsToBye, spentGold
+     ;
      bool enoghGold;
 
      Console.WriteLine("Здравствуй, путник. У нас ты можешь купить кристаллы за золото.");
@@ -14,5 +15,5 @@
      enoghGold = goldCount >= spentGold;
      cristallsToBye = cristallsToBye * Convert.ToInt32(enoghGold);
 
-     goldLeft = goldCount - cristallsToBye * cristallsPrice;
-     Console.WriteLine($"Отлично. Теперь у тебя {goldLeft} золота и {cristallsToBye} кристаллов");
+     goldCount -= cristallsToBye * cristallsPrice;
+     Console.WriteLine($"Отлично. Теперь у тебя {goldCount} золота и {cristallsToBye} кристаллов");
