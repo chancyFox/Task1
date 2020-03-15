@@ -1,22 +1,8 @@
-﻿#region Shadow
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace task4
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            #endregion
             double goldCount, silverCount, cristallsCount;
             int continueExchange = 1;
 
             Console.WriteLine("У нас Вы можете произвести обмен валют: \nЗолото: 5 серебряных монет или 1/2 кристалла " +
-                "\nСеребро: 1/5 золотой монеты или 1/10 кристалла \nКристалл: 2 золотые монеты или 10 серебрянных \n");
+                "\nСеребро: 1/5 золотой монеты или 1/10 кристалла \nКристалл: 2 золотые монеты или 10 серебрянных монет \n");
 
             Console.Write("Ваш баланс золота: ");
             goldCount = Convert.ToInt32(Console.ReadLine());
@@ -26,7 +12,7 @@ namespace task4
 
             Console.Write("Ваш баланс кристаллов: ");
             cristallsCount = Convert.ToInt32(Console.ReadLine());
-            Console.Write("\n");
+            Console.WriteLine();
 
             while (continueExchange == 1)
             { 
@@ -77,7 +63,6 @@ namespace task4
                             default:
                                 Console.WriteLine("Вы сделали что-то не так... \n");
                                 break;
-
                         }
                         break;
 
@@ -122,8 +107,6 @@ namespace task4
                             default:
                                 Console.WriteLine("Вы сделали что-то не так... \n");
                                 break;
-
-
                         }
                         break;
 
@@ -171,7 +154,7 @@ namespace task4
                             default:
                                 Console.WriteLine("Вы сделали что-то не так...\n");
                                 break;
-
+                                
                                 break;
                         }
                         break;
@@ -181,8 +164,3 @@ namespace task4
                 continueExchange = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("\n");
             }    
-#region Shadow
-        }
-    }
-}
-#endregion  
