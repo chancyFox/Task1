@@ -1,16 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace password
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-
             string password = "12345"; 
             int tryes = 3;
             bool isPasswordCorrect = false;
@@ -40,6 +27,3 @@ namespace password
                     }
                 }
             }
-        }
-    }
-}
