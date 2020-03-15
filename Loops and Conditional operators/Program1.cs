@@ -1,3 +1,10 @@
+//Описание программы:
+//Выводится курс обмена, у пользователя запрашивается количество имеющейся валюты
+//Затем предлагается выбрать, что купить и какой валютой расплатиться 
+//Далее выводится баланс и предлагается продолжить обмен
+//В случае, если средств недостаточно, также предлагается продолжить обмен
+//В случае, если пользователь вводит непредусмотренный символ, также предлагается продолжить обмен
+
             double goldCount, silverCount, cristallsCount;
             int continueExchange = 1;
 
@@ -77,7 +84,6 @@
                         switch (givenToBye1)
                         {
                             case 1:
-                                
                                 if ((goldCount - boughtCount1 * 0.2) >= 0)
                                 {
                                     goldCount -= boughtCount1 * 0.2;
@@ -91,7 +97,6 @@
                                 break;
 
                             case 2:
-                              
                                 if ((cristallsCount - boughtCount1 * 0.1) >= 0)
                                 {
                                     cristallsCount -= boughtCount1 * 0.1;
@@ -109,11 +114,9 @@
                                 break;
                         }
                         break;
-
-
+                                        
 
                     case "3":
-
                         Console.Write("Сколько кристаллов вы хотите купить: ");
                         int boughtCount2 = Convert.ToInt32(Console.ReadLine());
 
@@ -124,7 +127,6 @@
                         switch (givenToBye2)
                         {
                             case 1:
-                               
                                 if ((goldCount - boughtCount2 * 2) >= 0)
                                 {
                                     goldCount -= boughtCount2 * 2;
@@ -138,7 +140,6 @@
                                 break;
 
                             case 2:
-                                
                                 if ((silverCount - boughtCount2 * 10) >= 0)
                                 {
                                     silverCount -= boughtCount2 * 10;
@@ -159,8 +160,8 @@
                         }
                         break;
                 }
-
+                        
                 Console.Write("Хотите продолжить обмен? \n1 - продолжить \n2 - покинуть пункт обмена \n\nВыбираю: ");
                 continueExchange = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("\n");
+                Console.WriteLine();
             }    
