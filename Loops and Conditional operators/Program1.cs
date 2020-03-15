@@ -79,7 +79,7 @@
 
                         Console.Write("\nЧем будете расплачиваться? \n1 - золотом \n2 - кристаллами \n\nВыбираю: ");
                         int givenToBye1 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("\n");
+                        Console.WriteLine();
 
                         switch (givenToBye1)
                         {
@@ -122,7 +122,7 @@
 
                         Console.Write("Чем будете расплачиваться? \n1 - золотом \n2 - серебром \n\nВыбираю ");
                         int givenToBye2 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("\n");
+                        Console.WriteLine();
 
                         switch (givenToBye2)
                         {
