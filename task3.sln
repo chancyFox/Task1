@@ -1,25 +1,13 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29806.167
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task3", "task3\task3.csproj", "{4DFADFFF-704D-45A2-980E-D8E7BAFF216B}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4DFADFFF-704D-45A2-980E-D8E7BAFF216B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4DFADFFF-704D-45A2-980E-D8E7BAFF216B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4DFADFFF-704D-45A2-980E-D8E7BAFF216B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4DFADFFF-704D-45A2-980E-D8E7BAFF216B}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0A605F87-C6D4-46C3-A0A8-D51204CBA4EB}
-	EndGlobalSection
-EndGlobal
+for (int i = 7; i < 100; i += 7)
+{
+	Console.WriteLine(i);
+}
+
+
+int i = 0;
+
+while ((i+7) < 100)
+{
+	i += 7;
+	Console.WriteLine(i);
+}
