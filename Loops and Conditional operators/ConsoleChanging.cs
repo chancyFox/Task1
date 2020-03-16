@@ -30,23 +30,19 @@ namespace console_changing
                         Console.ForegroundColor = ConsoleColor.DarkBlue;
                         Console.WriteLine();
                         break;
-
                     case "ChangeName":
                         Console.Write("Введите ваше новое имя: ");
                         name = Console.ReadLine();
                         Console.WriteLine();
                         break;
-
                     case "Train":
                         powerPoint += 5;
                         Console.WriteLine();
                         break;
-
                     case "Rest":
                         healthPoint += 5;
                         Console.WriteLine();
                         break;
-
                     case "Retutn":
                         name = "Вася";
                         healthPoint = 1;
@@ -54,7 +50,6 @@ namespace console_changing
                         Console.ForegroundColor = ConsoleColor.Black;
                         Console.WriteLine();
                         break;
-
                     case "Esc":
                         Console.WriteLine("До встречи!");
                         break;
