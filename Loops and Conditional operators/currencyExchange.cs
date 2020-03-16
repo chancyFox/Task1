@@ -58,7 +58,7 @@ namespace task4
                                     Console.WriteLine("Вы недостаточно богаты, чтобы сделать это. \n");
                                 }
                                 break;
-
+                                
                             case 2:
                                 if ((cristallsCount - boughtCount * 0.5) >= 0)
                                 {
