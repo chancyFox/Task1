@@ -39,7 +39,7 @@ namespace task4
                         Console.Write("Сколько золота вы хотите купить: ");
                         int boughtCount = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine();
-
+                        
                         Console.Write("Чем будете расплачиваться? \n1 - серебром \n2 - кристаллами \n\nВыбираю: ");
                         int givenToBye = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine();
