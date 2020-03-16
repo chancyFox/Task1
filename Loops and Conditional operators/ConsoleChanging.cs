@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace about_change
+namespace console_changing
 {
     class Program
     {
@@ -13,9 +13,9 @@ namespace about_change
             String command = "1";
             string name = "Вася";
             int healthPoint = 5, powerPoint = 5;
-
-            Console.WriteLine($"Добрый день! \n\nИмя: {name} \nСила: {powerPoint}  \nЗдоровье: {healthPoint}\n"); 
-            Console.WriteLine("Список доступных комманд: \nGLC - изменить цвет шрифта \nChangeName - изменить имя " +
+            
+            Console.WriteLine($"Добрый день! \n\nИмя: {name} \nСила: {powerPoint} \nЗдоровье: {healthPoint}\n");
+            Console.WriteLine("Список доступных комманд: \nCLCh - изменить цвет шрифта \nChangeName - изменить имя " +
                 "\nTrain - потренироваться и увеличить количество очков силы \nRest - отдохнуть и увеличить количество очков здоровья " +
                 "\nReturn - вернуть изначальные настройки \nEsc - выйти из программы\n");
 
@@ -23,10 +23,10 @@ namespace about_change
             {
                 Console.Write("Что вы хотите сделать? \nКоманда: ");
                 command = Console.ReadLine();
-
+                
                 switch (command)
                 {
-                    case "GLC":
+                    case "CLCh":
                         Console.ForegroundColor = ConsoleColor.DarkBlue;
                         Console.WriteLine();
                         break;
@@ -49,7 +49,7 @@ namespace about_change
 
                     case "Retutn":
                         name = "Вася";
-                        healthPoint = 1; 
+                        healthPoint = 1;
                         powerPoint = 1;
                         Console.ForegroundColor = ConsoleColor.Black;
                         Console.WriteLine();
@@ -59,10 +59,8 @@ namespace about_change
                         Console.WriteLine("До встречи!");
                         break;
                 }
-
                 Console.WriteLine($"Теперь ваши характеристики таковы: \nИмя: {name} \nСила: {powerPoint}  \nЗдоровье: {healthPoint}\n");
             }
-
         }
     }
 }
