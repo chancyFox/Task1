@@ -12,12 +12,12 @@ namespace name_in_bold
         {
             Console.Write("Введите ваше имя: ");
             string name = Console.ReadLine();
-
+            
             Console.Write("Из какого симфола сделать рамку: ");
             char simbol = Convert.ToChar(Console.ReadLine());
-
+            
             int nameLenght = name.Length;
-
+           
             for (int i = 0; i < (nameLenght + 4); i++)
             {
                 Console.Write(simbol);
