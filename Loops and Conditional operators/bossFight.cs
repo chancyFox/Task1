@@ -149,8 +149,7 @@ namespace boss
                 else if ((opponentHealth > 0) && (health >0))
                 {
                     Console.WriteLine("\nНа поле не осталось живых, оба погибли.\n");
-                }
-                
+                } 
                 else if (opponentHealth <= 0)
                 {
                     Console.WriteLine("\nПобеда героя! Голем повержен!\n");
