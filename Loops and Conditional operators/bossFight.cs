@@ -1,18 +1,18 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace boss 
+namespace boss
 {
     class Program
     {
         static void Main(string[] args)
         {
             Random rand = new Random();
-            double health = 200, damage, opponentHealth = 200, opponentDamage = rand.Next(20, 40), lowDamage, buffPoint = 1.2;
-            bool canNot = false, buff = false;
+            double health = 200, damage, opponentHealth = 200, opponentDamage = rand.Next(20, 40), lowDamage, prayerIsReadPoint = 1.2;
+            bool golemIsSummond = false, prayerIsRead = false;
             Console.Write("Введите ваше имя: ");
             string name = Console.ReadLine();
 
@@ -38,15 +38,15 @@ namespace boss
                 {
                     case "LetItBurn":
                         damage = 15;
-                        if (buff == true)
+                        if (prayerIsRead == true)
                         {
-                            damage *= buffPoint;
+                            damage *= prayerIsReadPoint;
                             Console.WriteLine("\nСила атаки увеличена на 20%\n");
                             opponentDamage *= 0.6;
                             health -= opponentDamage;
                             opponentHealth -= damage;
                             Console.WriteLine($"Голем наносит {opponentDamage} урона, герой наносит {damage} урона \nГолем: {opponentHealth}hp \nГерой: {health}hp");
-                            buff = false;
+                            prayerIsRead = false;
                         }
                         else
                         {
@@ -58,7 +58,7 @@ namespace boss
                         opponentDamage = rand.Next(20, 40);
                         break;
                     case "AngelTheKeeper":
-                        if (canNot == false)
+                        if (golemIsSummond == false)
                         {
                             Console.WriteLine("На поле появляется огненный голем.\n");
                             damage = 40;
@@ -72,14 +72,14 @@ namespace boss
                                 opponentDamage = 0;
                             }
 
-                            if (buff == true)
+                            if (prayerIsRead == true)
                             {
-                                damage *= buffPoint;
+                                damage *= prayerIsReadPoint;
                                 Console.WriteLine("\nСила атаки увеличена на 20%\n");
                                 opponentHealth -= damage;
                                 health -= opponentDamage;
                                 Console.WriteLine($"Голем наносит {opponentDamage} урона, герой наносит {damage} урона \nГолем: {opponentHealth}hp \nГерой: {health}hp");
-                                buff = false;
+                                prayerIsRead = false;
                             }
                             else
                             {
@@ -88,7 +88,7 @@ namespace boss
                                 Console.WriteLine($"Голем наносит {opponentDamage} урона, герой наносит {damage} урона \nГолем: {opponentHealth}hp \nГерой: {health}hp");
                             }
                             opponentDamage = rand.Next(20, 40);
-                            canNot = true;
+                            golemIsSummond = true;
                         }
                         else
                         {
@@ -99,9 +99,9 @@ namespace boss
                         if (health <= 25)
                         {
                             damage = 60;
-                            if (buff == true)
+                            if (prayerIsRead == true)
                             {
-                                damage *= buffPoint;
+                                damage *= prayerIsReadPoint;
                                 Console.WriteLine("\nСила атаки увеличена на 20%\n");
                                 if (opponentHealth > 0)
                                 {
@@ -110,7 +110,7 @@ namespace boss
                                 health /= 2;
                                 health -= opponentDamage;
                                 Console.WriteLine($"Голем наносит {opponentDamage} урона, герой наносит {damage} урона \nГолем: {opponentHealth}hp \nГерой: {health}hp");
-                                buff = false;
+                                prayerIsRead = false;
                             }
                             else
                             {
@@ -133,7 +133,7 @@ namespace boss
                         lowDamage /= 10;
                         opponentDamage *= lowDamage;
                         health -= opponentDamage;
-                        buff = true;
+                        prayerIsRead = true;
                         Console.WriteLine($"Голем наносит {opponentDamage} урона, герой наносит {damage} урона \nГолем: {opponentHealth}hp \nГерой: {health}hp");
                         opponentDamage = rand.Next(20, 40);
                         break;
@@ -146,10 +146,11 @@ namespace boss
                 {
                     Console.WriteLine("\nБой продолжается!\n");
                 }
-                else if ((opponentHealth > 0) && (health >0))
+                else if ((opponentHealth > 0) && (health > 0))
                 {
                     Console.WriteLine("\nНа поле не осталось живых, оба погибли.\n");
-                }            
+                }
+
                 else if (opponentHealth <= 0)
                 {
                     Console.WriteLine("\nПобеда героя! Голем повержен!\n");
