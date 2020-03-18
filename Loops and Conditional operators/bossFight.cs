@@ -12,7 +12,7 @@ namespace boss
         {
             Random rand = new Random();
             double health = 200, damage, opponentHealth = 200, opponentDamage = rand.Next(20, 40), lowDamage, attackPowerIncreaced = 1.2;
-            bool golemIsSummond = false, prayerIsRead = false;
+            bool golemIsSummoned = false, prayerIsRead = false;
             Console.Write("Введите ваше имя: ");
             string name = Console.ReadLine();
 
@@ -58,7 +58,7 @@ namespace boss
                         opponentDamage = rand.Next(20, 40);
                         break;
                     case "AngelTheKeeper":
-                        if (golemIsSummond == false)
+                        if (golemIsSummoned == false)
                         {
                             Console.WriteLine("На поле появляется огненный голем.\n");
                             damage = 40;
@@ -88,7 +88,7 @@ namespace boss
                                 Console.WriteLine($"Голем наносит {opponentDamage} урона, герой наносит {damage} урона \nГолем: {opponentHealth}hp \nГерой: {health}hp");
                             }
                             opponentDamage = rand.Next(20, 40);
-                            golemIsSummond = true;
+                            golemIsSummoned = true;
                         }
                         else
                         {
