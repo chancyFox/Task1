@@ -60,7 +60,7 @@ namespace boss
                     case "AngelTheKeeper":
                         if (golemIsSummoned == false)
                         {
-                            Console.WriteLine("На поле появляется огненный голем.\n");
+                            Console.WriteLine("На поле появляется огненный элементаль.\n");
                             damage = 40;
 
                             if (opponentDamage >= 30)
@@ -92,7 +92,7 @@ namespace boss
                         }
                         else
                         {
-                            Console.WriteLine("\nВы больше не можете призвать голема.\n");
+                            Console.WriteLine("\nВы больше не можете призвать элементаля.\n");
                         }
                         break;
                     case "BattleCry":
