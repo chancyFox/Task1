@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace boss
+namespace boss 
 {
     class Program
     {
         static void Main(string[] args)
         {
             Random rand = new Random();
-            double health = 200, damage, opponentHealth = 200, opponentDamage = rand.Next(20, 40), lowDamage, prayerIsReadPoint = 1.2;
+            double health = 200, damage, opponentHealth = 200, opponentDamage = rand.Next(20, 40), lowDamage, attackPowerIncreaced = 1.2;
             bool golemIsSummond = false, prayerIsRead = false;
             Console.Write("Введите ваше имя: ");
             string name = Console.ReadLine();
@@ -40,7 +40,7 @@ namespace boss
                         damage = 15;
                         if (prayerIsRead == true)
                         {
-                            damage *= prayerIsReadPoint;
+                            damage *= attackPowerIncreaced;
                             Console.WriteLine("\nСила атаки увеличена на 20%\n");
                             opponentDamage *= 0.6;
                             health -= opponentDamage;
@@ -74,7 +74,7 @@ namespace boss
 
                             if (prayerIsRead == true)
                             {
-                                damage *= prayerIsReadPoint;
+                                damage *= attackPowerIncreaced;
                                 Console.WriteLine("\nСила атаки увеличена на 20%\n");
                                 opponentHealth -= damage;
                                 health -= opponentDamage;
@@ -101,7 +101,7 @@ namespace boss
                             damage = 60;
                             if (prayerIsRead == true)
                             {
-                                damage *= prayerIsReadPoint;
+                                damage *= attackPowerIncreaced;
                                 Console.WriteLine("\nСила атаки увеличена на 20%\n");
                                 if (opponentHealth > 0)
                                 {
@@ -146,11 +146,11 @@ namespace boss
                 {
                     Console.WriteLine("\nБой продолжается!\n");
                 }
-                else if ((opponentHealth > 0) && (health > 0))
+                else if ((opponentHealth > 0) && (health >0))
                 {
                     Console.WriteLine("\nНа поле не осталось живых, оба погибли.\n");
                 }
-
+                
                 else if (opponentHealth <= 0)
                 {
                     Console.WriteLine("\nПобеда героя! Голем повержен!\n");
