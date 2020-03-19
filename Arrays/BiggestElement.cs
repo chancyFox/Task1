@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +11,7 @@ namespace max
         static void Main(string[] args)
         {
             Random rand = new Random();
-            int biggestElement = int.MinValue;
+            int biggestElement = int.MinValue, row = 0, column = 0;
             int[,] array = new int[10, 10];
 
             for (int i = 0; i < array.GetLength(0); i++)
@@ -31,11 +31,23 @@ namespace max
                     if (array[i,j] > biggestElement)
                     {
                         biggestElement = array[i, j];
+                        row = i;
+                        column = j;
                     }
                     if ((i == (array.GetLength(0) - 1)) && (j == (array.GetLength(1) - 1)))
                     {
-                        Console.WriteLine("\n\nНаибольший элемент матрицы: " + biggestElement + "\n");
+                        Console.WriteLine("\n\nНаибольший элемент матрицы: " + biggestElement);
+                        array[row, column] = 0;
                     }
+                }
+            }
+
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                Console.WriteLine();
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    Console.Write(array[i, j] + " ");
                 }
             }
         }
