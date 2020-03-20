@@ -51,7 +51,6 @@ namespace dinamicArray
                     case "sort":
                         for (int i = 0; i < userArray.Length; i++)
                         {
-
                             Console.Clear();
                             for (int j = 0; j < userArray.Length - 1; j++)
                             {
@@ -72,7 +71,7 @@ namespace dinamicArray
                         if (Convert.ToInt32(userInputCommand) == (userInputNumber = Convert.ToInt32(userInputCommand)))
                         {
                             userInputNumber = Convert.ToInt32(userInputCommand);
-
+                            
                             int[] tempUserArray = new int[userArray.Length + 1];
                             for (int i = 0; i < userArray.Length; i++)
                             {
