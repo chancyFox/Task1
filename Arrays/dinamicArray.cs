@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -68,10 +68,10 @@ namespace dinamicArray
                         continueProgram = false;
                         break;
                     default:
-                        if (Convert.ToInt32(userInputCommand) == (userInputNumber = Convert.ToInt32(userInputCommand)))
-                        {
+                        int value;
+                        if (int.TryParse(userInputCommand, out value))                         
+                        {   
                             userInputNumber = Convert.ToInt32(userInputCommand);
-                            
                             int[] tempUserArray = new int[userArray.Length + 1];
                             for (int i = 0; i < userArray.Length; i++)
                             {
@@ -87,3 +87,4 @@ namespace dinamicArray
         }
     }
 }
+
