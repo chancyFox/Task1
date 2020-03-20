@@ -10,37 +10,37 @@ namespace dinamicArray
     {
         static void Main(string[] args)
         {
-            string userInputCommand;
-            int userInputNumber, sum = 0;
+            string inputCommand;          
             bool continueProgram = true;
-            int[] userArray = new int[0];
+            int[] array = new int[0];
 
             while (continueProgram)
             {
                 Console.SetCursorPosition(0, 15);
                 Console.Write("Массив: ");
-                
-                for (int i = 0; i < userArray.Length; i++)
+
+                for (int i = 0; i < array.Length; i++)
                 {
-                    Console.Write(userArray[i] + " ");
+                    Console.Write(array[i] + " ");
                 }
 
                 Console.SetCursorPosition(0, 0);
                 Console.WriteLine("Вам нужно заполнить массив произвольного размера. \n\nВведите: " +
               "\nsum - чтобы узнать сумму элементов полученного массива \nsort - чтобы отсортировать массив в порядке возрастания " +
               "\nend - чтобы закончить выполнение программы");
-                
+
                 Console.Write("\nВведите элемент массива или команду: ");
-                userInputCommand = Console.ReadLine();         
-       
-                userInputCommand = Convert.ToString(userInputCommand);
-                switch (userInputCommand)
+                inputCommand = Console.ReadLine();
+
+                inputCommand = Convert.ToString(inputCommand);
+                switch (inputCommand)
                 {
                     case "sum":
-                        for (int i = 0; i < userArray.Length; i++)
-                        {
-                            sum += userArray[i];
-                            if (i == userArray.Length - 1)
+                        int sum = 0;
+                        for (int i = 0; i < array.Length; i++)
+                        {                          
+                            sum += array[i];
+                            if (i == array.Length - 1)
                             {
                                 Console.Clear();
                                 Console.SetCursorPosition(0, 13);
@@ -49,41 +49,37 @@ namespace dinamicArray
                         }
                         break;
                     case "sort":
-                        for (int i = 0; i < userArray.Length; i++)
+                        for (int i = 0; i < array.Length; i++)
                         {
                             Console.Clear();
-                            for (int j = 0; j < userArray.Length - 1; j++)
+                            for (int j = 0; j < array.Length - 1; j++)
                             {
-                                if (userArray[j] > userArray[j + 1])
+                                if (array[j] > array[j + 1])
                                 {
-                                    int tempImt = userArray[j + 1];
-                                    userArray[j + 1] = userArray[j];
-                                    userArray[j] = tempImt;
+                                    int tempImt = array[j + 1];
+                                    array[j + 1] = array[j];
+                                    array[j] = tempImt;
                                 }
-                            }                                                      
+                            }
                         }
                         break;
                     case "end":
                         Console.WriteLine("Программа завершена.\n");
                         continueProgram = false;
                         break;
-                    default:
-                        if (int.TryParse(userInputCommand, out userInputNumber))                         
-                        {   
-                            userInputNumber = Convert.ToInt32(userInputCommand);
-                            int[] tempUserArray = new int[userArray.Length + 1];
-                            for (int i = 0; i < userArray.Length; i++)
-                            {
-                                tempUserArray[i] = userArray[i];
-                            }
-                            tempUserArray[tempUserArray.Length - 1] = userInputNumber;
-                            userArray = tempUserArray;
-                            Console.Clear();
+                    default:                     
+                        int inputNumber = Convert.ToInt32(inputCommand);
+                        int[] tempArray = new int[array.Length + 1];
+                        for (int i = 0; i < array.Length; i++)
+                        {
+                            tempArray[i] = array[i];
                         }
+                        tempArray[tempArray.Length - 1] = inputNumber;
+                        array = tempArray;
+                        Console.Clear();
                         break;
-                }      
+                }
             }
         }
     }
 }
-
