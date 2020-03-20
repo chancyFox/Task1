@@ -68,8 +68,7 @@ namespace dinamicArray
                         continueProgram = false;
                         break;
                     default:
-                        int value;
-                        if (int.TryParse(userInputCommand, out value))                         
+                        if (int.TryParse(userInputCommand, out userInputNumber))                         
                         {   
                             userInputNumber = Convert.ToInt32(userInputCommand);
                             int[] tempUserArray = new int[userArray.Length + 1];
