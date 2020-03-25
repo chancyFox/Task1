@@ -153,7 +153,7 @@ namespace funk1
             Console.WriteLine("\nФАМИЛИЯ / ИМЯ / ОТЧЕСТВО / ДОЛЖНОСТЬ\n");
             for (int i = 0; i < personData.Length; i++)
             {
-                Console.WriteLine(i + ") " + personData[i] + " - " + position[i]);
+                Console.WriteLine((i + 1) + ") " + personData[i] + " - " + position[i]);
             }
 
             Console.Write("Нажмите любую клавишу, чтобы продолжиить.");
