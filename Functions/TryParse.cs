@@ -24,11 +24,10 @@ namespace TryParse
 
             while(done == false)
             {
-                bool canParse = int.TryParse(data, out result);
-                if(canParse == true)
+                done = int.TryParse(data, out result);
+                if(done == true)
                 {
                     result = Convert.ToInt32(data);
-                    done = true;
                 }
                 else
                 {
